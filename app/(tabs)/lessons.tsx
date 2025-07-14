@@ -4,13 +4,23 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
 const lessons = [
-    { id : '1', title: 'Introdução ao HTML', topic: 'HTML', content: 'HTML é a base da web...' },
-    { id : '2', title: 'Estilizando com CSS', topic: 'CSS', content: 'CSS controla o estilo...' },
+  {
+    id: '1',
+    title: 'Introdução ao HTML',
+    topic: 'HTML',
+    content: 'HTML (HyperText Markup Language) é a base da web. Estrutura páginas com elementos como <h1>, <p>, e <div>. Exemplo: <h1>Olá, Mundo!</h1> cria um título. Tags como <a> criam links, e <img> adiciona imagens.',
+  },
+  {
+    id: '2',
+    title: 'Estilizando com CSS',
+    topic: 'CSS',
+    content: 'CSS (Cascading Style Sheets) define o estilo visual de páginas web. Exemplo: `color: blue;` muda a cor do texto, e `margin: 10px;` ajusta o espaçamento. Use seletores como `.class` ou `#id` para estilizar elementos específicos.',
+  },
 ];
 
 export default function LessonsScreen() {
     return (
-        <ThemedView style={StyleSheet.container}>
+        <ThemedView style={styles.container}>
             <Stack.Screen options={{ title: 'Lições'}} />
             <ThemedText type="title">Lições Disponíveis</ThemedText>
             <FlatList
